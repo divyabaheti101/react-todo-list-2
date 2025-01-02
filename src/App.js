@@ -4,6 +4,19 @@ import { useState, useEffect } from 'react'
 function App() {
   const [todos, setTodos] = useState([])
 
+  // You can call useEffect as many times as you want.
+  // Here since params are not passed into [], it will be called only once after render.
+  // this added to fetch todos, on every refresh, the below one on it's own doesn't work.
+  // if u remove the if condition, it won't work.
+  // bcoz any time u refresh the page the todos will be empty. -> useState([])
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem('todos'));
+    if(storedTodos.length > 0) {
+      setTodos(storedTodos);
+    }
+  }, []);
+
+  // parameter todos passes in [] means every time there is a change to todo useEffect will be called.
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
