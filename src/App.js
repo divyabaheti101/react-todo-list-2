@@ -2,6 +2,9 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
+//npm run deploy for deploy on gh pages
+// u will see a new branch that has contents of build
+
 function App() {
   const [todos, setTodos] = useState([])
 
