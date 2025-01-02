@@ -13,6 +13,12 @@ function App() {
     setTodos(todos.filter((todo, i) => i !== index))
   }
 
+  function editTodo(index, text) {
+    const newTodos = [...todos]
+    newTodos[index] = text
+    setTodos(newTodos)
+  }
+
   return (
     <div>
       <h1>Todo List</h1>
@@ -27,7 +33,7 @@ function App() {
       <ul>
         {todos.map((todo, index) => (
           <li key={index}>
-            {todo}
+            <input type='text' value={todo} onChange={(event) => editTodo(index, event.target.value)} />
             <button onClick={() => removeTodo(index)}>Remove</button>
           </li>
         ))}
