@@ -16,11 +16,22 @@ function App() {
   return (
     <div>
       <h1>Todo List</h1>
-      <form>
+      <form onSubmit={(event) => {
+        event.preventDefault()
+        addTodo(event.target.elements.todo.value)
+        event.target.elements.todo.value = ''
+      }}>
         <input type='text' name='todo' />
         <button type='submit'>Add Todo</button>
       </form>
-      
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index}>
+            {todo}
+            <button onClick={() => removeTodo(index)}>Remove</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
