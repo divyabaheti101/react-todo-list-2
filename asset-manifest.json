@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/divyabaheti101/react-todo-list-2/static/css/main.b261d979.css",
+    "main.js": "/divyabaheti101/react-todo-list-2/static/js/main.acce8f0f.js",
+    "static/js/453.81f383cb.chunk.js": "/divyabaheti101/react-todo-list-2/static/js/453.81f383cb.chunk.js",
+    "index.html": "/divyabaheti101/react-todo-list-2/index.html",
+    "main.b261d979.css.map": "/divyabaheti101/react-todo-list-2/static/css/main.b261d979.css.map",
+    "main.acce8f0f.js.map": "/divyabaheti101/react-todo-list-2/static/js/main.acce8f0f.js.map",
+    "453.81f383cb.chunk.js.map": "/divyabaheti101/react-todo-list-2/static/js/453.81f383cb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b261d979.css",
+    "static/js/main.acce8f0f.js"
+  ]
+}
