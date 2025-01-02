@@ -1,13 +1,27 @@
 
-import { useState } from 'react';
-import './App.css';
+import { useState } from 'react'
 
 function App() {
-  const [value, setValue] = useState(5)
+  const [todos, setTodos] = useState([])
+
+  function addTodo(text){
+    setTodos([...todos, text])
+  }
+
+
+  function removeTodo(index){
+    setTodos(todos.filter((todo, i) => i !== index))
+  }
+
   return (
-    <>
-      <p>Hello World. The value is {value}.</p>
-    </>
+    <div>
+      <h1>Todo List</h1>
+      <form>
+        <input type='text' name='todo' />
+        <button type='submit'>Add Todo</button>
+      </form>
+      
+    </div>
   );
 }
 
