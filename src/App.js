@@ -1,8 +1,12 @@
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
   const [todos, setTodos] = useState([])
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   function addTodo(text){
     setTodos([...todos, text])
